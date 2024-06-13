@@ -25,7 +25,7 @@ app.post("/signup",async(req,res)=>{
     let blog=new blogmodel(input)
     blog.save()
     res.json({"status":"success"})
-})
+}) 
 app.post("/signin",(req,res)=>{
     let input =req.body
     blogmodel.find({"email":req.body.email}).then(
